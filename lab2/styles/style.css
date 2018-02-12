@@ -9,3 +9,9 @@ header, section, article, nav, footer, div {
   padding: 10px;
   margin: 10px;
 }
+
+nav.flex-container {
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
