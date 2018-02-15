@@ -21,3 +21,8 @@ ul.flex-container {
   padding: 10px;
   margin: auto;
 }
+
+li{
+  margin: auto;
+  padding: 10px;
+}
