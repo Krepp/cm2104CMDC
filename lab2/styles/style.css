@@ -14,8 +14,9 @@ header, section, article, nav, footer, div {
   display:flex;
 }
 
-nav.flex-container {
+ul.flex-container {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
+  padding: 10px;
 }
