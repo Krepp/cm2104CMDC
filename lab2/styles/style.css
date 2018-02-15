@@ -19,4 +19,5 @@ ul.flex-container {
   justify-content: space-between;
   flex-wrap: nowrap;
   padding: 10px;
+  margin: auto;
 }
