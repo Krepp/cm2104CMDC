@@ -9,7 +9,7 @@ $(document).ready(function(){
     $.ajax({
       type:"GET",
       url: "resources.json",
-      success: function(results){
+      success: function(result){
         //we deal with the data here
         var output="<table><thead><tr><th>Name</th><th>Provider</th><th>URL</th></thead><tbody>";
 
