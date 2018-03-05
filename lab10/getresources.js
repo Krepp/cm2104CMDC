@@ -9,8 +9,7 @@ $(document).ready(function(){
     $.ajax({
       type:"GET",
       url: "resouces.json",
-      success: funtion(results)
-      {
+      success: function(results){
         //we deal with the data here
         var output="<table><thead><tr><th>Name</th><th>Provider</th><th>URL</th></thead><tbody>";
 
@@ -24,6 +23,6 @@ $(document).ready(function(){
 
         }
     });
-    
+
   });
 });
