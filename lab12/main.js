@@ -1,27 +1,46 @@
 //set the map and initial coordinates
-var mymap = L.map('mapid').setView([0,0], 1);
+$.getJSON('custom.geo.json',function(data){
+            var mymap = L.map('mapid').setView([32,-35], 3);
+            var Esri_WorldGrayCanvas = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {attribution:'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ', maxZoom: 16 });
 
-var Esri_WorldGrayCanvas = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {attribution:'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ', maxZoom: 16 });
+            Esri_WorldGrayCanvas.addTo(mymap);
 
-Esri_WorldGrayCanvas.addTo(mymap);
+            L.geoJson(data).addTo(map);
+})
 
-$.getJSON('world-countries.json', function(json) {
+function style(feature) {
+    return {
+        fillColor: '#6666',
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '7',
+        fillOpacity: 0.7
+    };
+}
 
-		geoLayer = L.geoJson(json).addTo(mymap);
-		
-		map.fitBounds( geoLayer.getBounds() )
-			.setMaxBounds( geoLayer.getBounds().pad(0.5) );
+function highlightFeature(e) {
+    var layer = e.target;
 
-		geoList = new L.Control.GeoJSONSelector(geoLayer, {
-			zoomToLayer: true,
-			listOnlyVisibleLayers: true
-		});
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
 
-		geoList.on('change', function(e) {
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
+}
 
-			$('#selection').text( JSON.stringify(e.layers[0].feature.properties) );
-		});
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+}
 
-		map.addControl(geoList);
-
-	});
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+    });
+}
