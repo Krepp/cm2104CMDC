@@ -41,7 +41,7 @@ function highlightFeature(e) {
 function popupFeature(e){
     popup
         .setLatLng(e.latLng)
-        .setContent("You clicked the map at " + feature.properties.continent)
+        .setContent("You clicked the map at " + e.target.feature.properties.continent)
         .openOn(mymap);
 }
 
