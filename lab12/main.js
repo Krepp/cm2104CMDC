@@ -44,3 +44,8 @@ function onEachFeature(feature, layer) {
         mouseout: resetHighlight,
     });
 }
+
+var geojson = L.geoJson(statesData, {
+		style: style,
+		onEachFeature: onEachFeature
+	}).addTo(map);
