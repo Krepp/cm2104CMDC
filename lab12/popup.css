@@ -4,8 +4,15 @@ html{
   line-height: 1.4;
 }
 
+body{
+  background-color: red;
+}
+
+h1{
+  text-align: center;
+}
 #mainDiv{
   height:100 px;
   width: 100 px;
-  background-color: gray;
+  background-color: white;
 }
