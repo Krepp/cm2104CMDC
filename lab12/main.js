@@ -39,7 +39,10 @@ function highlightFeature(e) {
 }
 
 function popupFeature(e){
-  popup.setLatLng(e.latLng).setContent("You clicked the map at " + target.feature.properties.continent).openOn(mymap);
+    popup
+        .setLatLng(e.latLng)
+        .setContent("You clicked the map at " + target.feature.properties.continent)
+        .openOn(mymap);
 }
 
 
