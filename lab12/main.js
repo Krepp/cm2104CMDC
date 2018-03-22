@@ -1,4 +1,7 @@
 //set the map and initial coordinates
+var geojson;
+var popup = L.popup();
+
 function style(feature) {
     return {
         fillColor: getColour(feature.properties.continent),
@@ -37,10 +40,9 @@ function highlightFeature(e) {
 
 function popupFeature(e){
   popup.setLatLng(e.latLng).setContent("You clicked the map at " + target.feature.properties.continent).openOn(mymap);
-
-
-
 }
+
+
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
@@ -54,7 +56,7 @@ function onEachFeature(feature, layer) {
     });
 }
 
-var geojson;
+
 
 $.getJSON('custom.geo.json',function(data){
             var mymap = L.map('mapid').setView([32,-35], 3);
