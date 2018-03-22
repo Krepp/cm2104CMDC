@@ -15,7 +15,7 @@ function getColour(continent) {
            continent == "South America"  ? '#179a13' :
            continent == "Asia"  ? '#ffce01' :
            continent == "Europe"  ? '#3e76ec' :
-           continent == "Africa"   ? '#FFA500' :
+           continent == "Africa"   ? '#E59400' :
            continent == "Oceania"   ? '#800080' :
                       '#808080';
 }
