@@ -1,7 +1,7 @@
 //set the map and initial coordinates
 function style(feature) {
     return {
-        fillColor: getColor(feature.properties.continent),
+        fillColor: getColour(feature.properties.continent),
         weight: 2,
         opacity: 1,
         color: 'white',
@@ -10,7 +10,7 @@ function style(feature) {
     };
 }
 
-function getContinent(continent) {
+function getColour(continent) {
     return continent == "North America" ? '#800026' :
            continent == "South America"  ? '#BD0026' :
            continent == "Asia"  ? '#E31A1C' :
