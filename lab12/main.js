@@ -55,7 +55,7 @@ function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
-        mouseclick: popupFeature,
+        click: popupFeature,
     });
 }
 
