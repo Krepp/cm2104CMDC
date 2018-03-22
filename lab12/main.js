@@ -42,7 +42,7 @@ function highlightFeature(e) {
 function popupFeature(e){
     popup
         .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.target.feature.properties.country)
+        .setContent("You clicked the map at " + e.target.feature.properties.name)
         .openOn(mymap);
 }
 
