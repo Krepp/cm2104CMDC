@@ -5,7 +5,7 @@ $.getJSON('custom.geo.json',function(data){
 
             Esri_WorldGrayCanvas.addTo(mymap);
 
-            L.geoJson(data, {style: style}).addTo(mymap);
+            L.geoJson(data, {style: style, onEachFeature: onEachFeature}).addTo(mymap);
 })
 
 function style(feature) {
