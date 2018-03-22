@@ -7,3 +7,9 @@ html{
 #mapid{
   height: 400px;
 }
+
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper {
+    background: #e93434;
+    color: #ffffff;
+}
