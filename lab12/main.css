@@ -8,6 +8,11 @@ html{
   height: 400px;
 }
 
+ol{
+  align-self:left;
+  align-items:left;
+}
+
 .custom.leaflet-popup-tip,.custom.leaflet-popup-content-wrapper {
     background: #e93434;
     color: #ffffff;

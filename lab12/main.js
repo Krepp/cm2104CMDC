@@ -42,7 +42,7 @@ function highlightFeature(e) {
 function popupFeature(e){
     popup
         .setLatLng(e.latlng)
-        .setContent('<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="popup.css"></head><body id=\'popupBody\'><h1>Recipes</h1><div id=\'popupDiv\'><ol><li>Item1</li><li>Item2</li><li>Item3</li></ol></div></body></html>')
+        .setContent('<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="popup.css"></head><body id=\'popupBody\'><h1>Recipes</h1><div id=\'popupDiv\'><ol><li>Item1</li><li>Item2</li><li>Item3</li></ol></div></body></html>', '#popupBody{background-color: red;}')
         .openOn(mymap);
 }
 
