@@ -35,6 +35,14 @@ function highlightFeature(e) {
     }
 }
 
+function popupFeature(e){
+  popup
+          .setLatLng(e.target)
+          .setContent("You clicked the map at " + feature.properties.continent)
+          .openOn(mymap);
+
+}
+
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
 }
@@ -43,6 +51,7 @@ function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
+        mouseclick: popupFeature,
     });
 }
 
