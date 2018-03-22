@@ -42,7 +42,7 @@ function highlightFeature(e) {
 function popupFeature(e){
     popup
         .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.target.feature.properties.name)
+        .setContent('popup.html')
         .openOn(mymap);
 }
 
@@ -64,7 +64,7 @@ function onEachFeature(feature, layer) {
 
 $.getJSON('custom.geo.json',function(data){
             mymap = L.map('mapid').setView([32,-35], 3);
-            var Esri_WorldGrayCanvas = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {attribution:'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ', maxZoom: 16 });
+            var Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {attribution:'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ', maxZoom: 16 });
 
             Esri_WorldGrayCanvas.addTo(mymap);
 
