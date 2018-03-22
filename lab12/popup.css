@@ -1,19 +1,15 @@
-html{
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-  background-color: red;
-}
 
 #popupBody{
   background-color: red;
 }
 
-h1{
-  text-align: center;
-}
 #mainDiv{
   height:100 px;
   width: 300 px;
   background-color: white;
+}
+
+.leaflet-popup-content-wrapper{
+    background: #e93434;
+    color: #ffffff;
 }

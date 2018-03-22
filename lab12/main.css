@@ -12,8 +12,3 @@ ol{
   align-self:left;
   align-items:left;
 }
-
-.leaflet-popup-content-wrapper{
-    background: #e93434;
-    color: #ffffff;
-}
