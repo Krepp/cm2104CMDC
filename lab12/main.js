@@ -45,7 +45,7 @@ function onEachFeature(feature, layer) {
     });
 }
 
-var geojson = L.geoJson(statesData, {
+var geojson = L.geoJson(data, {
 		style: style,
 		onEachFeature: onEachFeature
 	}).addTo(map);
