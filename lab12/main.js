@@ -1,13 +1,23 @@
 //set the map and initial coordinates
 function style(feature) {
     return {
-        fillColor: '#6666',
+        fillColor: getColor(feature.properties.continent),
         weight: 2,
         opacity: 1,
         color: 'white',
         dashArray: '7',
         fillOpacity: 0.7
     };
+}
+
+function getContinent(continent) {
+    return continent == "North America" ? '#800026' :
+           continent == "South America"  ? '#BD0026' :
+           continent == "Asia"  ? '#E31A1C' :
+           continent == "Europe"  ? '#FC4E2A' :
+           continent == "Africa"   ? '#FD8D3C' :
+           continent == "Oceania"   ? '#FEB24C' :
+                      '#FFEDA0';
 }
 
 function highlightFeature(e) {
