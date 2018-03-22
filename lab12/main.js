@@ -15,9 +15,9 @@ function getColour(continent) {
            continent == "South America"  ? '#179a13' :
            continent == "Asia"  ? '#ffce01' :
            continent == "Europe"  ? '#3e76ec' :
-           continent == "Africa"   ? '#600' :
+           continent == "Africa"   ? '#FFA500' :
            continent == "Oceania"   ? '#800080' :
-                      '#FFEDA0';
+                      '#808080';
 }
 
 function highlightFeature(e) {
