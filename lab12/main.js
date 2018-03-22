@@ -11,12 +11,12 @@ function style(feature) {
 }
 
 function getColour(continent) {
-    return continent == "North America" ? '#800026' :
-           continent == "South America"  ? '#BD0026' :
-           continent == "Asia"  ? '#E31A1C' :
-           continent == "Europe"  ? '#FC4E2A' :
-           continent == "Africa"   ? '#FD8D3C' :
-           continent == "Oceania"   ? '#FEB24C' :
+    return continent == "North America" ? '#ff0000' :
+           continent == "South America"  ? '#179a13' :
+           continent == "Asia"  ? '#ffce01' :
+           continent == "Europe"  ? '#3e76ec' :
+           continent == "Africa"   ? '#600' :
+           continent == "Oceania"   ? '#800080' :
                       '#FFEDA0';
 }
 
