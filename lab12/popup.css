@@ -4,7 +4,8 @@ html{
   line-height: 1.4;
 }
 
-p{
+#mainDiv{
   height:100 px;
   width: 100 px;
+  background-color: gray;
 }
