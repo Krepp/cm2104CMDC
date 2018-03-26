@@ -1,5 +1,5 @@
 var http = require('http');
-var oneliner = require('one-liner-jokes');
+var oneliner = require('knock-knock-jokes');
 
 http.createServer(function(req, res){
   res.writeHead(200, {'Content-Type': 'text/html'});
