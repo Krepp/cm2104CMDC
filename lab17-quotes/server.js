@@ -31,7 +31,7 @@ MongoClient.connect(url, function(err, database) {
 //you need to complete these
 
 app.get('/', function(req,res) {
-  var output = "";
+  var output;
   db.collection('quotes').find().toArray(function(err, result) {
     if (err) throw err;
     console.log(result);
