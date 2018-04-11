@@ -41,8 +41,8 @@ app.get('/', function(req,res) {
       output += "<p>" + result[i].quote + "</p>"
       output += "</div>"
     };
+    res.render('pages/index')
   });
-  res.render('pages/index')
 });
 app.get('/add', function(req,res) {
   res.render('pages/add')
