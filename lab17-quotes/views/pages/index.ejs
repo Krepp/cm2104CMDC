@@ -36,7 +36,14 @@
     <div class="jumbotron">
 
       <h2>Quotes!</h2>
-      <% output %>
+      <% output.forEach(function(quote) { %>
+      <h3>
+      <%= quote.name %>
+      </h3>
+      <p>
+      <%= quote.quote %>
+      </p>
+      <% }); %>
 
 
     </div>
