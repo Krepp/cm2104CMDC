@@ -31,6 +31,7 @@ MongoClient.connect(url, function(err, database) {
 //you need to complete these
 
 app.get('/', function(req,res) {
+  var output = "";
   db.collection('quotes').find().toArray(function(err, result) {
     if (err) throw err;
     console.log(result);
@@ -40,8 +41,7 @@ app.get('/', function(req,res) {
       output += "<p>" + result[i].quote + "</p>"
       output += "</div>"
     }
-    res.send(output);
-  });
+  }
   res.render('pages/index')
 });
 app.get('/add', function(req,res) {
