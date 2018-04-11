@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Filter Quotes Form</title>
+  <% include ../partials/head %>
+</head>
+
+<body class="container">
+  <header>
+   <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div class="jumbotron">
+      <h1>Quotes by <%= name %></h1>
+      <% output.forEach(function(quote) { %>
+      <h3>
+      <%= quote.name %>
+      </h3>
+      <p>
+      <%= quote.quote %>
+      </p>
+      <% }); %>
+    </div>
+  </main>
+  <footer>
+   <% include ../partials/footer %>
+  </footer>
+</body>
+</html>
