@@ -51,7 +51,7 @@ app.get('/update', function(req,res) {
 });
 
 app.post('/search', function(req, res) {
-  var name = req.body;
+  var name = req.body.name;
   db.collection('quotes').find(req.body).toArray(function(err, result) {
     if (err) throw err;
     console.log(result);
