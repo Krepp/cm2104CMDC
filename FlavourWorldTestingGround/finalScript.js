@@ -24,9 +24,12 @@ function printJSON(jsondata){
 
 function addResultTitles(jsondata){
   var htmlstring = "";
+  var length = jsondata.matches.length;
 
-  var title = jsondata.matches[0].recipeName;
-  console.log(title);
-  htmlstring += "<li>" + title + "</li>";
+  for (var i = 0; i < length; i++){
+    var title = jsondata.matches[0].recipeName;
+    console.log(title);
+    htmlstring += "<li>" + title + "</li>";
+  }
   $("#results").html(htmlstring);
 }
