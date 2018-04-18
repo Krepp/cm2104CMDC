@@ -27,7 +27,7 @@ function addResultTitles(jsondata){
   var length = jsondata.matches.length;
 
   for (var i = 0; i < length; i++){
-    var title = jsondata.matches[0].recipeName;
+    var title = jsondata.matches[i].recipeName;
     console.log(title);
     htmlstring += "<li>" + title + "</li>";
   }
