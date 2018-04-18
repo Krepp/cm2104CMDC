@@ -26,7 +26,7 @@ function addResultTitles(jsondata){
   var htmlstring = "";
 
   var title = jsondata.recipeName;
-  Console.log(title);
+  console.log(title);
   htmlstring += "<li>" + title + "</li>";
   $("#results").html(htmlstring);
 }
