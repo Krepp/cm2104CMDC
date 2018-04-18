@@ -24,11 +24,8 @@ function printJSON(jsondata){
 
 function addResultTitles(jsondata){
   var htmlstring = "";
-  var titles = jsondata.recipeName;
 
-  for (var i = 0; i < 3; i++){
-    var title = titles[i];
-    htmlstring += "<li>" + title + "</li>";
-  }
+  var title = jsondata.recipeName;
+  htmlstring += "<li>" + title + "</li>";
   $("#results").html(htmlstring);
 }
