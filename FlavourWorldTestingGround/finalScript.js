@@ -24,9 +24,10 @@ function printJSON(jsondata){
 
 function addResultTitles(jsondata){
   var htmlstring = "";
+  var titles = jsondata.recipeName;
 
   for (var i = 0; i < 3; i++){
-    var title = jsondata.Search[i].recipeName;
+    var title = titles[i];
     htmlstring += "<li>" + title + "</li>";
   }
   $("#results").html(htmlstring);
