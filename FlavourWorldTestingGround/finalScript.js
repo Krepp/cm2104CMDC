@@ -24,9 +24,8 @@ function printJSON(jsondata){
 
 function addResultTitles(jsondata){
   var htmlstring = "";
-  var length = Object.keys(jsondata).length;
 
-  for (var i = 0; i < length; i++){
+  for (var i = 0; i < 3; i++){
     var title = jsondata.Search[i].recipeName;
     htmlstring += "<li>" + title + "</li>";
   }
