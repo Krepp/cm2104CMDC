@@ -25,7 +25,7 @@ function printJSON(jsondata){
 function addResultTitles(jsondata){
   var htmlstring = "";
 
-  var title = jsondata[1].recipeName;
+  var title = jsondata.matches[0].recipeName;
   console.log(title);
   htmlstring += "<li>" + title + "</li>";
   $("#results").html(htmlstring);
